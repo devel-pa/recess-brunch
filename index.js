@@ -47,6 +47,7 @@ module.exports = RecessLinter = (function() {
   }
 
   RecessLinter.prototype.lint = function(data, path, callback) {
+    if(path.indexOf('app') !== 0) return;
     var recess = sync(linter);
     sync.fiber(function() {
         return recess('./' + path, { strictPropertyOrder: false })[0];
