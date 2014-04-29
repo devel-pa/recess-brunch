@@ -1,0 +1,34 @@
+{
+  "name": "recess-brunch",
+  "version": "0.0.1",
+  "description": "Adds RECESS support to brunch.",
+  "author": {
+    "name": "Paul Apostol",
+    "url": "http://www.paul-apostol.eu/"
+  },
+  "homepage": "https://github.com/devel.pa/recess-brunch",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:devel.pa/recess-brunch.git"
+  },
+  "main": "./index",
+  "scripts": {
+
+  },
+  "dependencies": {
+    "recess": "~1.1.9",
+    "synchronize": "0.9.3"
+  },
+  "devDependencies": {
+    "mocha": "1.11.0",
+    "chai": "1.7.0",
+    "fake-fs": "0.2.1"
+  },
+  "readme": "## recess-brunch\nAdds RECESS support to\n[brunch](http://brunch.io).\n\n## Usage\nInstall the plugin via npm with `npm install --save recess-brunch`.\n\nOr, do manual install:\n\n* Add `\"recess-brunch\": \"x.y.z\"` to `package.json` of your brunch app.\n  Pick a plugin version that corresponds to your minor (y) brunch version.\n* If you want to use git version of plugin, add\n`\"recess-brunch\": \"git+ssh://git@github.com:devel.pa/recess-brunch.git\"`.\n\nBy default, only files in your `config.paths.app` are linted.\n\nYou can customize RECESS config by changing brunch config:\n\n```coffeescript\nconfig =\n  plugins:\n    recess:\n      pattern: /^app\\/.*\\.js$/\n      options:\n        bitwise: true\n        curly: true\n      globals:\n        jQuery: true\n      warnOnly: true\n```\n\nEvery sub-option (`pattern`, `options`, `globals`, `warnOnly`) is optional.\n\nIf `warnOnly` is set to true then recess errors will output as console warnings.\nThis allows the build process to continue rather than exiting on any linter errors.\n\n## License\n\nThe MIT License (MIT)\n\nCopyright (c) 2012-2013 Paul Miller (http://paulmillr.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/devel.pa/recess-brunch/issues"
+  },
+  "_id": "recess-brunch@0.0.1",
+  "_from": "recess-brunch@0.0.1"
+}
