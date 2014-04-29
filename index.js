@@ -49,7 +49,7 @@ module.exports = RecessLinter = (function() {
   RecessLinter.prototype.lint = function(data, path, callback) {
     var recess = sync(linter);
     sync.fiber(function() {
-        return recess('./' + path, {  })[0];
+        return recess('./' + path, { strictPropertyOrder: false })[0];
     }, function(err, result) {
       if(err) {
         return callback(formatError(err));
